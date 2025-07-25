@@ -6,9 +6,10 @@ interface SavedSongsModalProps {
   songs: Song[];
   mood: 'joy' | 'sadness';
   onClose: () => void;
+  onDelete: (trackId: number) => void;
 }
 
-const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose }) => {
+const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose, onDelete }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -22,6 +23,7 @@ const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose 
                 <h3>{song.trackName}</h3>
                 <p>{song.artistName}</p>
               </div>
+              <button onClick={() => onDelete(song.trackId)}>삭제</button>
             </li>
           ))}
         </ul>
