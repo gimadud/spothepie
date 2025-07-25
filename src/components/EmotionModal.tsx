@@ -9,8 +9,8 @@ interface EmotionModalProps {
 }
 
 const emotionDescriptions = {
-  joy: '기쁨의 감정을 선택하시겠습니까?',
-  sadness: '슬픔의 감정을 선택하시겠습니까?',
+  joy: '기쁨FM에 도달했어요. 오늘의 감정에 어울리는 곡을 재생할까요?',
+  sadness: '슬픔FM에 도달했어요. 오늘의 감정에 어울리는 곡을 재생할까요?',
 };
 
 const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm, mood }) => {
@@ -22,7 +22,7 @@ const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm,
         <h2>{mood === 'joy' ? '기쁨 ' : '슬픔 '}</h2>
         <p className="emotion-description">{emotionDescriptions[mood]}</p>
         <div className="button-group">
-          <button onClick={() => onConfirm(mood)} className="confirm-button">선택</button>
+          <button onClick={() => onConfirm(mood)} className="confirm-button">재생하기</button>
           <button onClick={onClose} className="close-button">닫기</button>
         </div>
       </div>
