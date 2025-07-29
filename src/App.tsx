@@ -19,15 +19,17 @@ const Layout = () => (
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<MainPage />} />
-        <Route path="selection" element={<Radio />} />
-        <Route path="recommendation" element={<RecommendationPage />} />
-        <Route path="cassettebox" element={<Cassettebox />} />
-        <Route path="calendar" element={<Calendar />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainPage />} />
+          <Route path="selection" element={<Radio />} />
+          <Route path="recommendation" element={<RecommendationPage />} />
+          <Route path="cassettebox" element={<Cassettebox />} />
+          <Route path="calendar" element={<Calendar />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
