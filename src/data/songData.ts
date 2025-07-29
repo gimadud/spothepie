@@ -5,6 +5,6 @@ export const songDatabase = {
   relaxed: [],
   happiness: [],
   anxiety: [],
-  depressin: [],
+  depression: [],
   tiredness: []
 };

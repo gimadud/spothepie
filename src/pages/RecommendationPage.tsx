@@ -12,7 +12,7 @@ const RecommendationPage: React.FC = () => {
     joy: '기분 좋은 날엔, 기분 좋은 멜로디!',
     sadness: '위로가 필요할 땐',
     angry: '화가 날 땐, 음악으로 풀어보세요!',
-    relaxed: '평온한 날, 편안한 음악과 함께',
+    relaxed: '평온한 날,  음악과 함께',
     happiness: '행복한 순간을 더 행복하게!',
     anxiety: '불안한 마음을 달래주는 멜로디',
     depression: '우울할 땐, 음악의 위로를',
@@ -50,7 +50,7 @@ const RecommendationPage: React.FC = () => {
         {song.previewUrl && <audio controls src={song.previewUrl}></audio>}
       </div>
       <button onClick={handleSave}>카세트 테이프에 저장하기</button>
-      <button>닫기</button>
+      <button onClick={() => navigate(-1)}>닫기</button>
     </div>
   );
 };

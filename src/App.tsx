@@ -1,4 +1,4 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import './css/App.css';
 import MainPage from './pages/MainPage';
 import Radio from './pages/Radio';
@@ -9,9 +9,6 @@ import Calendar from './pages/Calendar';
 const Layout = () => (
   <div className="App">
     <header className="App-header">
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
       <Outlet />
     </header>
   </div>
