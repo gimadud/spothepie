@@ -1,7 +1,7 @@
 import type { Song } from './Song';
 
 export interface MoodRecord {
-  mood: 'joy' | 'sadness'; //감정 두개만 구현해보고 추후에 추가
+  mood: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness';
   song: Song;
 }
 
