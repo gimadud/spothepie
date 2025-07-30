@@ -2,6 +2,9 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { Song } from '../types/Song';
 import '../css/RecommendationPage.css';
+import RadioHeader from '../components/RadioHeader';
+import RadioFooter from '../components/RadioFooter';
+
 
 const RecommendationPage: React.FC = () => {
   const location = useLocation();
@@ -40,18 +43,39 @@ const RecommendationPage: React.FC = () => {
     alert('노래가 저장되었습니다.');
   };
 
+  const emotionColors = {
+    joy: '#F6E381',
+    sadness: '#87B1DC',
+    angry: '#F2798F',
+    relaxed: '#A6D1B5',
+    happiness: '#F9C1C0',
+    anxiety: '#F2AD85',
+    depression: '#BFBFBF',
+    tiredness: '#BAA8D2',
+  };
+
+  const recommendationInfoStyle = {
+    boxShadow: `0 10px 100px 50px ${emotionColors[mood]}`
+  };
+
   return (
+    <>
+    <RadioHeader />
     <div className="recommendation-container">
-      <h2>{moodMessages[mood]}</h2>
-      <div className="song-details">
-        <img src={song.artworkUrl100.replace('100x100bb', '300x300bb')} alt={song.trackName} />
-        <h3>{song.trackName}</h3>
-        <p>{song.artistName}</p>
-        {song.previewUrl && <audio controls src={song.previewUrl}></audio>}
+      <div className="recommendation-info" style={recommendationInfoStyle}>
+        <h2>{moodMessages[mood]}</h2>
+        <div className="song-details">
+          <img src={song.artworkUrl100.replace('100x100bb', '300x300bb')} alt={song.trackName} />
+          <h3>{song.trackName}</h3>
+          <p>{song.artistName}</p>
+          {song.previewUrl && <audio controls src={song.previewUrl}></audio>}
+        </div>
+        <button className="save-button" onClick={handleSave}>카세트 테이프에 저장하기</button>
+        <button className="close2-button" onClick={() => navigate(-1)}>닫기</button>
       </div>
-      <button onClick={handleSave}>카세트 테이프에 저장하기</button>
-      <button onClick={() => navigate(-1)}>닫기</button>
     </div>
+    <RadioFooter />
+    </>
   );
 };
 
