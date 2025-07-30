@@ -65,7 +65,7 @@ const RecommendationPage: React.FC = () => {
       <div className="recommendation-info" style={recommendationInfoStyle}>
         <h2>{moodMessages[mood]}</h2>
         <div className="song-details">
-          <img src={song.artworkUrl100} alt={song.trackName} />
+          <img src={song.artworkUrl100.replace('100x100bb', '1000x1000bb')} alt={song.trackName} />
           <h3>{song.trackName}</h3>
           <p>{song.artistName}</p>
           {song.previewUrl && <audio controls src={song.previewUrl}></audio>}

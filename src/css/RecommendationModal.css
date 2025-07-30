@@ -28,11 +28,12 @@
 
 .song-details h3 {
   margin: 10px 0;
+  color: #524438;
 }
 
 .song-details p {
   margin: 5px 0;
-  color: #555;
+  color: #524438;
 }
 
 .modal-content button {
