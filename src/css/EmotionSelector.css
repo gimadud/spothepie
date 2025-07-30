@@ -1,17 +1,17 @@
 .radio-section {
   background-color: #D6EAF1;
-  border: 20px solid #83AEBC;
-  width: 800px;
-  height: 400px;
+  border: 10px solid #83AEBC;
+  width: 700px;
+  height: 440px;
   border-radius: 60px;
   position: relative;
   margin: 50px;
-  margin-top: 115px;
-  color: #524438;
+  margin-top: 120px;
+  margin-bottom: 150px;
 }
 
 .radio-top{
-    width: 800px;
+    width: 700px;
     height: 120px;
     margin-top: 0;
     display: flex;
@@ -24,10 +24,10 @@
 
 .antenna {
   width: 280px;
-  height: 15px;
+  height: 10px;
   background-color: #83AEBC;
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 100px;
   transform: rotate(-18deg);
   transform-origin: left center;
@@ -39,14 +39,14 @@
   background-color: #83AEBC;
   border-radius: 15%;
   position: absolute;
-  top: -40px;       
+  top: -30px;       
   right: 40px;      
 }
 
 .radio-buttons {
   background-color: #C0DCE7;
-  border: 10px solid #83AEBC;
-  width: 730px;
+  border: 8px solid #83AEBC;
+  width: 640px;
   margin-top: 0;
   border-radius: 8px;
   display: flex;
@@ -56,15 +56,15 @@
 
 .radio-buttons button {
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 16px;
     color:#83AEBC;
     font-weight: 600;
 }
 
 .blank {
-    height: 60px;
-    width: 60px;
-    border-right: 10px solid #83AEBC;
+    height: 50px;
+    width: 50px;
+    border-right: 5px solid #83AEBC;
 }
 
 .speaker {
@@ -74,7 +74,7 @@
   background-color: #C0DCE7;
   border-radius: 50%;
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   left: 30px;
   display: flex;
   justify-content: space-around;
@@ -98,7 +98,7 @@
 
 .lines {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   right: 50px;
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@
 }
 
 .line {
-  width: 450px;
+  width: 360px;
   height: 12px;
   background-color: #83AEBC;
   border-radius: 6px;

@@ -24,8 +24,10 @@ const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose,
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>X</button>
-        <h2>{moodKorean[mood]} 카세트</h2>
+        <div className='modal-top'>
+          <h2>{moodKorean[mood]} 카세트</h2>
+          <button className="close-button" onClick={onClose}>닫기</button>
+        </div>
         <ul>
           {songs.map((song, index) => (
             <li key={index}>
