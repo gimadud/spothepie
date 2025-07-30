@@ -1,0 +1,27 @@
+.mood-cassette{
+  display: flex;
+  justify-content: center;
+}
+
+.mood-cassette button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.mood-cassette img {
+  width: 200px;
+  height: 200px;
+}
+
+
+.mood-cassette-button p {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
