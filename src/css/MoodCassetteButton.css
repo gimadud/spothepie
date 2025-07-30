@@ -12,6 +12,7 @@
   cursor: pointer;
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .mood-cassette img {
@@ -20,8 +21,8 @@
 }
 
 
-.mood-cassette-button p {
-  font-size: 18px;
+.mood-cassette p {
+  font-size: 20px;
   margin: 0;
   text-align: center;
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import type { Song } from '../types/Song';
 import '../css/Cassettebox.css';
 import SavedSongsModal from '../components/SavedSongsModal';
@@ -8,7 +7,6 @@ import CassetteBoxHeader from '../components/CassetteBoxHeader';
 import CassetteBoxFooter from '../components/CassetteBoxFooter';
 
 const Cassettebox = () => {
-  const navigate = useNavigate();
   const [savedSongs, setSavedSongs] = useState<Record<string, Song[]>>({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMood, setSelectedMood] = useState<'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' | null>(null);
