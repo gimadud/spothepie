@@ -1,16 +1,19 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../css/Calendar.css';
 
-const Calendar = () => {
-  const navigate = useNavigate();
+import CalendarView from '../components/CalendarView';
+import '../css/Calendar.css';
+import CalendarHeader from '../components/CalenderHeader';
+import CalendarFooter from '../components/CalenderFooter';
+
+const CalendarPage = () => {
+
 
   return (
-    <div>
-      <h1>달력</h1>
-      <button onClick={() => navigate('/')}>메인으로 돌아가기</button>
-    </div>
+    <>
+    <CalendarHeader />
+    <CalendarView />
+    <CalendarFooter />
+    </>
   );
 };
 
-export default Calendar;
+export default CalendarPage;

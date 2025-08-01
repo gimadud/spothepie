@@ -4,12 +4,13 @@ import type { Song } from '../types/Song';
 import '../css/RecommendationPage.css';
 import RadioHeader from '../components/RadioHeader';
 import RadioFooter from '../components/RadioFooter';
-
+import { useMoodRecorder } from '../hooks/useMoodRecorder';
 
 const RecommendationPage: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const { song, mood } = location.state as { song: Song; mood: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' };
+  const { recordMood } = useMoodRecorder();
 
   const moodMessages: { [key in typeof mood]: string } = {
     joy: '기분 좋은 날엔, 기분 좋은 멜로디!',
@@ -33,13 +34,7 @@ const RecommendationPage: React.FC = () => {
   }
 
   const handleSave = () => {
-    const savedSongs = localStorage.getItem('savedSongs');
-    const songs = savedSongs ? JSON.parse(savedSongs) : {};
-    if (!songs[mood]) {
-      songs[mood] = [];
-    }
-    songs[mood].push(song);
-    localStorage.setItem('savedSongs', JSON.stringify(songs));
+    recordMood(mood, song);
     alert('노래가 저장되었습니다.');
   };
 
