@@ -27,8 +27,8 @@ const moodColors: { [key in SavedSongsModalProps['mood']]: string } = {
   relaxed: '#A6D1B5', 
   happiness: '#F9C1C0', 
   anxiety: '#F2AD85', 
-  depression: '#BAA8D2', 
-  tiredness: '#BFBFBF',
+  depression: '#BFBFBF', 
+  tiredness: '#BAA8D2',
 };
 
 const moodLightColors: { [key in SavedSongsModalProps['mood']]: string } = {
@@ -38,8 +38,8 @@ const moodLightColors: { [key in SavedSongsModalProps['mood']]: string } = {
   relaxed: '#C5E4CF', 
   happiness: '#FFDFDF', 
   anxiety: '#FFCAAC', 
-  depression: '#E7D7FC', 
-  tiredness: '#E9E9E9', 
+  depression: '#E9E9E9', 
+  tiredness: '#E7D7FC', 
 };
 
 const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose, onDelete }) => {

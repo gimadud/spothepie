@@ -3,7 +3,7 @@ export const songDatabase = {
   sadness: [1683092569, 1733432325],
   angry: [],
   relaxed: [1562632660, 1776246888],
-  happiness: [1705400235, 1476227488, 1476227488],
+  happiness: [1705400235, 1476227488],
   anxiety: [],
   depression: [1345295576, 1727654024, 1484046668],
   tiredness: []
