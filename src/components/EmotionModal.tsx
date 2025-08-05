@@ -2,12 +2,13 @@ import React from 'react';
 import '../css/EmotionModal.css';
 import { moodColors } from '../data/moodColors';
 import { emotionDescriptions } from '../data/emotionDescriptions';
+import type { MoodRecord } from '../types/Mood';
 
 interface EmotionModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onConfirm: (mood: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' ) => void;
-  mood: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' | null;
+  onConfirm: (mood: MoodRecord['mood']) => void;
+  mood: MoodRecord['mood'] | null;
 }
 
 const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm, mood }) => {
