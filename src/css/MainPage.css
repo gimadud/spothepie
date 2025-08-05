@@ -31,16 +31,19 @@ button{
 .radio-icon {
     width: 200px;
     height: 200px;
+    padding: 0;
 }
 
 .cassette-icon {
     width: 200px;
     height: 200px;
+    padding: 0;
 }
 
 .calender-icon {
     width: 200px;
     height: 200px;
+    padding: 0;
 }
 
 .main-page p{

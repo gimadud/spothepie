@@ -45,4 +45,3 @@ const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm,
   );
 };
 export default EmotionModal;
-
