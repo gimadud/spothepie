@@ -1,4 +1,4 @@
-.song-modal-overlay {
+.save-song-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     z-index: 1000;
 }
 
-.song-modal-content {
+.save-song-modal-content {
     padding: 20px;
     border-radius: 15px;
     width: 500px;
@@ -22,7 +22,7 @@
     max-height: 70vh; 
 }
 
-.song-modal-content ul {
+.save-song-modal-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -30,7 +30,7 @@
     overflow-y: auto; 
 }
 
-.song-modal-content li {
+.save-song-modal-content li {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -38,32 +38,32 @@
     border-radius: 15px;
 }
 
-.song-modal-content li img {
+.save-song-modal-content li img {
     width: 60px;
     height: 60px;
     margin-left: 10px;
 }
 
-.song-modal-content li div {
+.save-song-modal-content li div {
     flex-grow: 1;
 }
 
-.song-modal-content li h3 {
+.save-song-modal-content li h3 {
     margin: 3px;
     font-size: 16px;
 }
 
-.song-modal-content li p {
+.save-song-modal-content li p {
     margin: 0;
     font-size: 14px;
     color: #666;
 }
 
-.song-modal-content .song-close-button {
+.save-song-modal-content .song-close-button {
     align-self: flex-end;
 }
 
-.song-modal-content li button {
+.save-song-modal-content li button {
     background-color: #ff4d4d;
     color: white;
     border: none;
@@ -72,14 +72,14 @@
     cursor: pointer;
 }
 
-.song-modal-top {
+.save-song-modal-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.song-modal-top h2 {
+.save-song-modal-top h2 {
     color: white;
     text-align: center;
     flex-grow: 1;
@@ -87,7 +87,7 @@
     font-size: 30px;
 }
 
-.song-modal-top .song-close-button {
+.save-song-modal-top .song-close-button {
     background: none;
     border: none;
     font-size: 20px;

@@ -7,10 +7,8 @@ import Cassettebox from './pages/Cassettebox';
 import Calendar from './pages/Calendar';
 
 const Layout = () => (
-  <div className="App">
-    <header className="App-header">
-      <Outlet />
-    </header>
+  <div className="app-container">
+    <Outlet />
   </div>
 );
 

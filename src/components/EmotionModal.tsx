@@ -1,5 +1,7 @@
 import React from 'react';
 import '../css/EmotionModal.css';
+import { moodColors } from '../data/moodColors';
+import { emotionDescriptions } from '../data/emotionDescriptions';
 
 interface EmotionModalProps {
   isOpen: boolean;
@@ -8,33 +10,11 @@ interface EmotionModalProps {
   mood: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' | null;
 }
 
-const emotionDescriptions = {
-  joy: '기쁨FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  sadness: '슬픔FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  angry: '화남FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  relaxed: '평온FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  happiness: '행복FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  anxiety: '불안FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  depression: '우울FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-  tiredness: '피곤FM에 도달했어요.\n오늘의 감정에 어울리는 곡을\n재생할까요?',
-};
-
-const emotionColors = {
-  joy: '#F6E381',
-  sadness: '#87B1DC',
-  angry: '#F2798F',
-  relaxed: '#A6D1B5',
-  happiness: '#F9C1C0',
-  anxiety: '#F2AD85',
-  depression: '#BFBFBF',
-  tiredness: '#BAA8D2',
-};
-
 const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm, mood }) => {
   if (!isOpen || !mood) return null;
 
   const modalContentStyle = {
-    boxShadow: `0 10px 100px 50px ${emotionColors[mood]}`
+    boxShadow: `0 10px 100px 50px ${moodColors[mood]}`
   };
 
   return (
@@ -65,3 +45,4 @@ const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm,
   );
 };
 export default EmotionModal;
+
