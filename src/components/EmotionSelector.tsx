@@ -1,9 +1,8 @@
 import React from 'react';
 import '../css/EmotionSelector.css';
-import type { MoodRecord } from '../types/Mood';
 
 interface EmotionSelectorProps {
-  onSelectEmotion: (emotion: MoodRecord['mood']) => void;
+  onSelectEmotion: (emotion: 'joy' | 'sadness'| 'angry' |'relaxed' | 'happiness' | 'anxiety' | 'depression' | 'tiredness' ) => void;
 }
 
 const EmotionSelector: React.FC<EmotionSelectorProps> = ({ onSelectEmotion }) => {

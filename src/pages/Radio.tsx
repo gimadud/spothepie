@@ -6,16 +6,15 @@ import EmotionModal from '../components/EmotionModal';
 import { useSongRecommender } from '../hooks/useSongRecommender';
 import RadioHeader from '../components/RadioHeader';
 import RadioFooter from '../components/RadioFooter';
-import type { MoodRecord } from '../types/Mood';
 
 const Radio = () => {
   const [loading, setLoading] = useState(false);
   const [isEmotionModalOpen, setIsEmotionModalOpen] = useState(false);
-  const [selectedEmotion, setSelectedEmotion] = useState<MoodRecord['mood'] | null>(null);
+  const [selectedEmotion, setSelectedEmotion] = useState<keyof typeof songDatabase | null>(null);
   const navigate = useNavigate();
   const { recommendSong } = useSongRecommender();
 
-  const handleEmotionSelect = (emotion: MoodRecord['mood']) => {
+  const handleEmotionSelect = (emotion: keyof typeof songDatabase) => {
     setSelectedEmotion(emotion);
     setIsEmotionModalOpen(true);
   };
@@ -25,7 +24,7 @@ const Radio = () => {
     setSelectedEmotion(null);
   };
 
-  const handleRecommendation = async (emotion: MoodRecord['mood']) => {
+  const handleRecommendation = async (emotion: keyof typeof songDatabase) => {
     closeEmotionModal();
     setLoading(true);
 
