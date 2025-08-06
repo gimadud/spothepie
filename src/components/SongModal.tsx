@@ -2,6 +2,7 @@ import React from 'react';
 import type { Song } from '../types/Song';
 import '../css/SongModal.css';
 import { moodToKorean } from '../data/moodTranslations';
+import AnimatedPage from './AnimatedPage';
 
 interface SongModalProps {
   song: Song;
@@ -12,6 +13,7 @@ interface SongModalProps {
 const SongModal: React.FC<SongModalProps> = ({ song, mood, onClose }) => {
   
   return (
+    <AnimatedPage>
     <div className="song-modal-overlay">
       <div className="song-modal-content">
         <div className="song-modal-header">
@@ -24,6 +26,7 @@ const SongModal: React.FC<SongModalProps> = ({ song, mood, onClose }) => {
         <button className="song-close-button" onClick={onClose}>닫기</button>       
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 

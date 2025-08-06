@@ -5,6 +5,7 @@ import '../css/RecommendationPage.css';
 import RadioHeader from '../components/RadioHeader';
 import RadioFooter from '../components/RadioFooter';
 import { useMoodRecorder } from '../hooks/useMoodRecorder';
+import AnimatedPage from '../components/AnimatedPage.tsx';
 
 const RecommendationPage: React.FC = () => {
   const location = useLocation();
@@ -55,6 +56,7 @@ const RecommendationPage: React.FC = () => {
 
   return (
     <>
+    <AnimatedPage>
     <RadioHeader />
     <div className="recommendation-container">
       <div className="recommendation-info" style={recommendationInfoStyle}>
@@ -69,6 +71,7 @@ const RecommendationPage: React.FC = () => {
         <button className="close2-button" onClick={() => navigate(-1)}>닫기</button>
       </div>
     </div>
+    </AnimatedPage>
     <RadioFooter />
     </>
   );

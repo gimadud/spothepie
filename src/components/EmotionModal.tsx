@@ -2,6 +2,8 @@ import React from 'react';
 import '../css/EmotionModal.css';
 import { moodColors } from '../data/moodColors';
 import { emotionDescriptions } from '../data/emotionDescriptions';
+import AnimatedPage from './AnimatedPage';
+
 
 interface EmotionModalProps {
   isOpen: boolean;
@@ -18,6 +20,7 @@ const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm,
   };
 
   return (
+    <AnimatedPage>
     <div className="modal-overlay" onClick={onClose}>
       <div
         className="modal-content"
@@ -42,6 +45,8 @@ const EmotionModal: React.FC<EmotionModalProps> = ({ isOpen, onClose, onConfirm,
         </div>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
+
 export default EmotionModal;

@@ -3,6 +3,8 @@ import type { Song } from '../types/Song';
 import '../css/SavedSongsModal.css';
 import { moodToKorean } from '../data/moodTranslations';
 import { moodColors, moodLightColors } from '../data/moodColors';
+import AnimatedPage from './AnimatedPage';
+
 
 interface SavedSongsModalProps {
   songs: Song[];
@@ -16,6 +18,7 @@ const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose,
   const listItemBackgroundColor = moodLightColors[mood];
 
   return (
+    <AnimatedPage>
     <div className="save-song-modal-overlay">
       <div className="save-song-modal-content" style={{ backgroundColor }}>
         <div className='save-song-modal-top'>
@@ -36,6 +39,7 @@ const SavedSongsModal: React.FC<SavedSongsModalProps> = ({ songs, mood, onClose,
         </ul>
       </div>
     </div>
+    </AnimatedPage>
   );
 };
 
