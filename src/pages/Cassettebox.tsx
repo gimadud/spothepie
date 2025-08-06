@@ -5,6 +5,13 @@ import SavedSongsModal from '../components/SavedSongsModal';
 import MoodCassetteButton from '../components/MoodCassetteButton';
 import CassetteBoxHeader from '../components/CassetteBoxHeader';
 import CassetteBoxFooter from '../components/CassetteBoxFooter';
+import { motion } from 'framer-motion';
+
+const pageVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
 
 const Cassettebox = () => {
   const [savedSongs, setSavedSongs] = useState<Record<string, Song[]>>({});
@@ -41,6 +48,13 @@ const Cassettebox = () => {
 
   return (
     <>
+    <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.5 }}
+    >
     <CassetteBoxHeader />
     <div className="cassettebox-container">
       <h1>그 날의 감정이 담긴 노래, <br></br>다시 꺼내 볼까요?</h1>
@@ -59,6 +73,7 @@ const Cassettebox = () => {
       )}
     </div>
     <CassetteBoxFooter />
+    </motion.div>
     </>
   );
 };

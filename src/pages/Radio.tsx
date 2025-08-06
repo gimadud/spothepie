@@ -6,6 +6,14 @@ import EmotionModal from '../components/EmotionModal';
 import { useSongRecommender } from '../hooks/useSongRecommender';
 import RadioHeader from '../components/RadioHeader';
 import RadioFooter from '../components/RadioFooter';
+import { motion } from 'framer-motion';
+
+const pageVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 
 const Radio = () => {
   const [loading, setLoading] = useState(false);
@@ -39,19 +47,27 @@ const Radio = () => {
 
   return (
     <>
-      <RadioHeader />
-      <div className='radio-container'>
-        <h1>오늘 당신의 감정 주파수는 <br></br>몇MHz인가요?</h1>
-        <EmotionSelector onSelectEmotion={handleEmotionSelect} />
-        {loading && <p>노래를 추천 중입니다...</p>}
-        <EmotionModal
-          isOpen={isEmotionModalOpen}
-          onClose={closeEmotionModal}
-          onConfirm={handleRecommendation}
-          mood={selectedEmotion}
-        />
-      </div>
-      <RadioFooter />
+      <motion.div
+      variants={pageVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.5 }}
+      >
+        <RadioHeader />
+        <div className='radio-container'>
+          <h1>오늘 당신의 감정 주파수는 <br></br>몇MHz인가요?</h1>
+          <EmotionSelector onSelectEmotion={handleEmotionSelect} />
+          {loading && <p>노래를 추천 중입니다...</p>}
+          <EmotionModal
+            isOpen={isEmotionModalOpen}
+            onClose={closeEmotionModal}
+            onConfirm={handleRecommendation}
+            mood={selectedEmotion}
+          />
+        </div>
+        <RadioFooter />
+      </motion.div>
     </>
   );
 };
