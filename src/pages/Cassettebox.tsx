@@ -48,6 +48,7 @@ const Cassettebox = () => {
 
   return (
     <>
+    <CassetteBoxHeader />
     <motion.div
       variants={pageVariants}
       initial="initial"
@@ -55,7 +56,6 @@ const Cassettebox = () => {
       exit="exit"
       transition={{ duration: 0.5 }}
     >
-    <CassetteBoxHeader />
     <div className="cassettebox-container">
       <h1>그 날의 감정이 담긴 노래, <br></br>다시 꺼내 볼까요?</h1>
       <div className="cassette-grid">
@@ -72,8 +72,8 @@ const Cassettebox = () => {
         />
       )}
     </div>
-    <CassetteBoxFooter />
     </motion.div>
+    <CassetteBoxFooter />
     </>
   );
 };

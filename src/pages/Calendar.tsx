@@ -20,6 +20,7 @@ const CalendarPage = () => {
 
   return (
     <>
+    <CalendarHeader />
     <motion.div
       variants={pageVariants}
       initial="initial"
@@ -27,13 +28,12 @@ const CalendarPage = () => {
       exit="exit"
       transition={{ duration: 0.5 }}
     >
-    <CalendarHeader />
     <div className="calendar-content">
       {mostFeltMood && <MostFeltMood mood={mostFeltMood} />}
       <CalendarView />
     </div>
-    <CalendarFooter />
     </motion.div>
+    <CalendarFooter />
     </>
   );
 };

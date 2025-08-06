@@ -2,13 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px; /* Adjust as needed */
-}
-
-.most-felt-mood-container {
-  /* Add specific styles for MostFeltMood container if needed */
-}
-
-.calendar-view-container {
-  /* Add specific styles for CalendarView container if needed */
+  gap: 20px; 
+  flex: 1;
 }

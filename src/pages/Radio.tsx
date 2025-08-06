@@ -47,14 +47,14 @@ const Radio = () => {
 
   return (
     <>
-      <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 0.5 }}
-      >
-        <RadioHeader />
+      <RadioHeader />
+        <motion.div
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+        >
         <div className='radio-container'>
           <h1>오늘 당신의 감정 주파수는 <br></br>몇MHz인가요?</h1>
           <EmotionSelector onSelectEmotion={handleEmotionSelect} />
@@ -66,8 +66,8 @@ const Radio = () => {
             mood={selectedEmotion}
           />
         </div>
-        <RadioFooter />
-      </motion.div>
+        </motion.div>
+      <RadioFooter />
     </>
   );
 };
