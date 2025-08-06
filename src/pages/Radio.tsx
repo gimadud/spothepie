@@ -6,13 +6,7 @@ import EmotionModal from '../components/EmotionModal';
 import { useSongRecommender } from '../hooks/useSongRecommender';
 import RadioHeader from '../components/RadioHeader';
 import RadioFooter from '../components/RadioFooter';
-import { motion } from 'framer-motion';
-
-const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import AnimatedPage from '../components/AnimatedPage';
 
 
 const Radio = () => {
@@ -48,13 +42,7 @@ const Radio = () => {
   return (
     <>
       <RadioHeader />
-        <motion.div
-        variants={pageVariants}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ duration: 0.5 }}
-        >
+        <AnimatedPage>
         <div className='radio-container'>
           <h1>오늘 당신의 감정 주파수는 <br></br>몇MHz인가요?</h1>
           <EmotionSelector onSelectEmotion={handleEmotionSelect} />
@@ -66,7 +54,7 @@ const Radio = () => {
             mood={selectedEmotion}
           />
         </div>
-        </motion.div>
+        </AnimatedPage>
       <RadioFooter />
     </>
   );

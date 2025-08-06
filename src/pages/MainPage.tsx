@@ -6,13 +6,7 @@ import CassetteIcon from '../images/CassetteIcon.png';
 import MainHeader from '../components/MainHeader';
 import MainFooter from '../components/MainFooter';
 import LightIcon from '../images/LightIcon.png'
-import { motion } from 'framer-motion';
-
-const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
+import AnimatedPage from '../components/AnimatedPage';
 
 
 const MainPage = () => {
@@ -33,13 +27,7 @@ const MainPage = () => {
   return (
     <>
       <MainHeader />
-      <motion.div
-      variants={pageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ duration: 0.5 }}
-      >
+      <AnimatedPage>
         <div className="main-page">
           <img
           src={LightIcon}
@@ -75,7 +63,7 @@ const MainPage = () => {
             </button>
             </div>
           </div>
-        </motion.div>
+        </AnimatedPage>
       <MainFooter />
     </>
   );
