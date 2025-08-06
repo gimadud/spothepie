@@ -38,7 +38,7 @@ const MainPage = () => {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.5 }}
-    >=
+    >
         <MainHeader />
           <div className="main-page">
             <img
