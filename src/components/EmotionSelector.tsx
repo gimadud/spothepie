@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import '../css/EmotionSelector.css';
 
 interface EmotionSelectorProps {
@@ -6,12 +6,32 @@ interface EmotionSelectorProps {
 }
 
 const EmotionSelector: React.FC<EmotionSelectorProps> = ({ onSelectEmotion }) => {
+  const [barPosition, setBarPosition] = useState(0);
+  const radioButtonsRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (radioButtonsRef.current) {
+      const rect = radioButtonsRef.current.getBoundingClientRect();
+      setBarPosition(e.clientX - rect.left);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setBarPosition(0);
+  };
+
   return (
     <div className='radio-section'>
         <div className='radio-top'>
           <div className="antenna"></div>
           <div className="dial"></div>
-          <div className='radio-buttons'>
+          <div 
+            className='radio-buttons'
+            ref={radioButtonsRef}
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          >
+            <div className="mouse-bar" style={{ left: `${barPosition}px` }}></div>
             <button className='blank'></button>
             <button onClick={() => onSelectEmotion('joy')}>기쁨</button>
             <button onClick={() => onSelectEmotion('sadness')}>슬픔</button>
