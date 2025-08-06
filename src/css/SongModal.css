@@ -55,7 +55,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+.song-close-button:hover {
+    background-color: #70604e;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .song-modal-content p {

@@ -34,16 +34,31 @@ button{
     padding: 0;
 }
 
+.radio-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .cassette-icon {
     width: 200px;
     height: 200px;
     padding: 0;
 }
 
+.cassette-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .calender-icon {
     width: 200px;
     height: 200px;
     padding: 0;
+}
+
+.calender-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 .main-page p{

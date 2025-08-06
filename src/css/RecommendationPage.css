@@ -38,6 +38,11 @@
     border: 5px solid #9CCED9;
 }
 
+.save-button:hover {
+    background-color: #78b6c4;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
 
 .close2-button {
   background-color: none;
@@ -49,4 +54,10 @@
   margin-left: 40px;
   width: 120px;
 
+}
+
+.close2-button:hover {
+    background-color: #dfdfdf;
+    color: #9CCED9;
+    transition: all 0.3s ease-in-out;
 }

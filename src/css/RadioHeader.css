@@ -20,3 +20,8 @@
     padding: 0;
 }
 
+.radio-header button:hover {
+    color: #92B9C6;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}

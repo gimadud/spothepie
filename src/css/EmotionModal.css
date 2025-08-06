@@ -49,8 +49,20 @@
   color: white;
 }
 
+.confirm-button:hover {
+    background-color: #78b6c4;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
 .close-button {
   background-color: none;
   border: 5px solid #9CCED9;
   color: #9CCED9;
+}
+
+.close-button:hover {
+    background-color: #dfdfdf;
+    color: #9CCED9;
+    transition: all 0.3s ease-in-out;
 }
