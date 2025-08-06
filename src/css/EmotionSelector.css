@@ -40,7 +40,11 @@
   border-radius: 15%;
   position: absolute;
   top: -30px;       
-  right: 40px;      
+  right: 40px;
+  overflow: hidden; 
+  background-image: linear-gradient(to right, #C0DCE7 1px, transparent 1px);
+  background-size: 10px 100%; 
+  transition: background-position-x 0.2s ease-out;
 }
 
 .radio-buttons {

@@ -7,26 +7,34 @@ interface EmotionSelectorProps {
 
 const EmotionSelector: React.FC<EmotionSelectorProps> = ({ onSelectEmotion }) => {
   const [barPosition, setBarPosition] = useState(0);
+  const [lineOffset, setLineOffset] = useState(0); 
   const radioButtonsRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (radioButtonsRef.current) {
       const rect = radioButtonsRef.current.getBoundingClientRect();
-      setBarPosition(e.clientX - rect.left);
+      const mouseX = e.clientX - rect.left;
+      setBarPosition(mouseX);
+
+      const radioButtonsWidth = rect.width;
+      const maxDialMovement = 100; 
+
+      const newOffset = (mouseX / radioButtonsWidth) * maxDialMovement;
+      setLineOffset(newOffset);
     }
   };
 
   const handleMouseLeave = () => {
     setBarPosition(0);
+    setLineOffset(0); 
   };
 
   return (
     <div className='radio-section'>
         <div className='radio-top'>
           <div className="antenna"></div>
-          <div className="dial"></div>
-          <div 
-            className='radio-buttons'
+          <div className="dial" style={{ backgroundPositionX: `${lineOffset}px` }}></div> {/* Apply backgroundPositionX */}
+          <div className='radio-buttons'
             ref={radioButtonsRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
