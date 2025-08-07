@@ -6,19 +6,36 @@ import { songDatabase } from '../data/songData';
 export const useMoodRecorder = () => {
   const today = useKSTDate();
 
-  const recordMood = (emotion: keyof typeof songDatabase, song: Song) => {
+  const recordMood = (emotion: keyof typeof songDatabase, song: Song): boolean => {
     const savedMoods = localStorage.getItem('moods');
     const moods: MoodStorage = savedMoods ? JSON.parse(savedMoods) : {};
 
     moods[today] = { mood: emotion, song: song };
     localStorage.setItem('moods', JSON.stringify(moods));
+
+    const savedSongs = localStorage.getItem('savedSongs');
+    const songs: Record<string, Song[]> = savedSongs
+      ? JSON.parse(savedSongs)
+      : {};
+
+    if (!songs[emotion]) {
+      songs[emotion] = [];
+    }
+
+    if (songs[emotion].some((s) => s.trackId === song.trackId)) {
+      return false; 
+    }
+
+    songs[emotion].push(song);
+    localStorage.setItem('savedSongs', JSON.stringify(songs));
+    return true; 
   };
 
   const getMostFeltMoodThisMonth = () => {
     const savedMoods = localStorage.getItem('moods');
     const moods: MoodStorage = savedMoods ? JSON.parse(savedMoods) : {};
 
-    const currentMonth = today.substring(0, 7); // YYYY-MM
+    const currentMonth = today.substring(0, 7); 
     const monthlyMoods: (keyof typeof songDatabase)[] = [];
 
     for (const date in moods) {
@@ -51,5 +68,3 @@ export const useMoodRecorder = () => {
 
   return { recordMood, getMostFeltMoodThisMonth };
 };
-
-//달력용
