@@ -1,0 +1,75 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.main-page{
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    flex-direction: column;
+    min-height: 60vh;
+    margin-top: 0;
+    background-color: #FEFBF3;
+    justify-content: flex-start;
+    color: #524438;
+    
+}
+
+button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;  
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 20px;
+    color: #524438;
+
+}
+
+.radio-icon {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+.radio-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cassette-icon {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+.cassette-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.calender-icon {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+.calender-icon:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.main-page p{
+    margin: 0;
+    font-size: 22px;
+} 
+
+
+h1{
+    margin: 0;
+    padding: 20px;
+    font-size: 40px;
+}
+

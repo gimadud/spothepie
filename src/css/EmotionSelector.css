@@ -1,0 +1,131 @@
+.radio-section {
+  background-color: #D6EAF1;
+  border: 10px solid #83AEBC;
+  width: 700px;
+  height: 440px;
+  border-radius: 60px;
+  position: relative;
+  margin: 50px;
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+
+.radio-top{
+    width: 700px;
+    height: 120px;
+    margin-top: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    flex-direction: column;
+    border-bottom: 10px solid #83AEBC;
+    
+}
+
+.antenna {
+  width: 280px;
+  height: 10px;
+  background-color: #83AEBC;
+  position: absolute;
+  top: -10px;
+  left: 100px;
+  transform: rotate(-18deg);
+  transform-origin: left center;
+}
+
+.dial {
+  width: 140px;
+  height: 30px;
+  background-color: #83AEBC;
+  border-radius: 15%;
+  position: absolute;
+  top: -30px;       
+  right: 40px;
+  overflow: hidden; 
+  background-image: linear-gradient(to right, #C0DCE7 1px, transparent 1px);
+  background-size: 10px 100%; 
+  transition: background-position-x 0.2s ease-out;
+}
+
+.radio-buttons {
+  background-color: #C0DCE7;
+  border: 8px solid #83AEBC;
+  width: 640px;
+  margin-top: 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.radio-buttons button {
+    margin-top: 0px;
+    font-size: 16px;
+    color:#83AEBC;
+    font-weight: 600;
+    position: relative;
+
+    background-color: transparent;
+}
+
+.blank {
+    height: 50px;
+    width: 50px;
+    border-right: 5px solid #83AEBC;
+}
+
+.speaker {
+  width: 180px;
+  height: 180px;
+  border: 10px solid #83AEBC;
+  background-color: #C0DCE7;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.bar {
+  width: 8px;
+  height: 80%;
+  background-color: #83AEBC;
+  border-radius: 7px;
+}
+
+.bar:nth-child(1) { height: 45%; }
+.bar:nth-child(2) { height: 80%; }
+.bar:nth-child(3) { height: 90%; }
+.bar:nth-child(4) { height: 80%; }
+.bar:nth-child(5) { height: 45%; }
+
+
+.lines {
+  position: absolute;
+  bottom: 60px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.line {
+  width: 360px;
+  height: 12px;
+  background-color: #83AEBC;
+  border-radius: 6px;
+}
+
+.mouse-bar {
+  position: absolute;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #83AEBC;
+  transition: left 0.2s ease-out;
+}

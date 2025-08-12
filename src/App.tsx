@@ -1,10 +1,10 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
-import './styles/App.css';
-import MainPage from './pages/MainPage/MainPage';
-import Radio from './pages/Radio/Radio';
-import RecommendationPage from './pages/Radio/RecommendationPage';
-import Cassettebox from './pages/Cassettebox/Cassettebox';
-import Calendar from './pages/Calendar/Calendar';
+import { useLocation, Routes, Route, Outlet } from 'react-router-dom';
+import './css/App.css';
+import MainPage from './pages/MainPage';
+import Radio from './pages/Radio';
+import RecommendationPage from './pages/RecommendationPage';
+import Cassettebox from './pages/Cassettebox';
+import Calendar from './pages/Calendar';
 import { AnimatePresence } from 'framer-motion';
 
 const Layout = () => (
@@ -14,6 +14,7 @@ const Layout = () => (
 );
 
 function App() {
+  const location = useLocation();
 
   return (
     <>

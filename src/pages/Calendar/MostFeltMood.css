@@ -1,0 +1,42 @@
+.most-felt-mood-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-right: 0px;
+  margin-top: 80px;
+  margin-left: 50px;
+  background-color: #D4C9BD;
+  border-radius: 15px;
+  width: 250px;
+  height: 500px;
+  color: #524438;
+}
+
+.most-felt-mood-container h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.mood-rank-list {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.most-felt-mood-container ol {
+  list-style: none;
+  margin: 0px;
+}
+
+.most-felt-mood-container li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.most-felt-mood-container li span {
+  font-weight: bold;
+  margin-right: 10px;
+}
