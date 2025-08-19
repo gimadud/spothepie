@@ -2,7 +2,7 @@ import React from 'react';
 import type { Song } from '../../types/Song';
 import './SongModal.css';
 import { moodToKorean } from '../../data/moodTranslations';
-import AnimatedPage from '../../components/AnimatedPage';
+//import AnimatedPage from '../../components/AnimatedPage';
 
 interface SongModalProps {
   song: Song;

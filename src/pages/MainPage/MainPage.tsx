@@ -6,7 +6,7 @@ import CassetteIcon from '../../images/CassetteIcon.png';
 import MainHeader from '../MainPage/MainHeader';
 import MainFooter from '../MainPage/MainFooter';
 import LightIcon from '../../images/LightIcon.png'
-import AnimatedPage from '../../components/AnimatedPage';
+//import AnimatedPage from '../../components/AnimatedPage';
 
 
 const MainPage = () => {
@@ -27,7 +27,7 @@ const MainPage = () => {
   return (
     <>
       <MainHeader />
-      <AnimatedPage>
+
         <div className="main-page">
           <img
           src={LightIcon}
@@ -63,7 +63,7 @@ const MainPage = () => {
             </button>
             </div>
           </div>
-        </AnimatedPage>
+
       <MainFooter />
     </>
   );
